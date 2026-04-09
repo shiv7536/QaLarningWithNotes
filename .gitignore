@@ -1,0 +1,44 @@
+# Eclipse
+.classpath
+.project
+.settings/
+.metadata/
+
+# Compiled class files
+*.class
+
+# Bin, build and target folders
+bin/
+target/
+build/
+
+# Maven
+!.mvn/wrapper/maven-wrapper.jar
+
+# IntelliJ
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Test and report outputs
+test-output/
+reports/
+screenshots/
+
+# Archives
+*.jar
+*.war
+*.ear
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*~

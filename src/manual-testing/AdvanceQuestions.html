@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>QA Interview Prep - All in One</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-top: 30px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        .card {
+            background: #fff;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .question {
+            font-weight: bold;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 8px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>QA Interview Questions (Manual + API + Selenium + Appium)</h1>
+
+    <div class="container">
+        <input type="text" id="search" placeholder="Search questions..." onkeyup="filterQ()">
+        <div id="qaList">
+            <h2>Manual Testing</h2>
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q1. What is SDLC?</div>
+                <div class="answer">Software Development Life Cycle defines phases like requirement, design,
+                    development, testing, deployment, maintenance.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q2. What is STLC?</div>
+                <div class="answer">Software Testing Life Cycle includes requirement analysis, planning, design,
+                    environment setup, execution, closure.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q3. Difference between Verification and Validation?</div>
+                <div class="answer">Verification checks 'are we building right product'; Validation checks 'are we
+                    building the right product'.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q4. What is a Test Case?</div>
+                <div class="answer">A set of preconditions, steps, and expected results to verify functionality.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q5. What is a Test Scenario?</div>
+                <div class="answer">High-level description of a feature to be tested.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q6. What is a Test Plan?</div>
+                <div class="answer">Document defining scope, approach, resources, schedule, risks.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q7. What is a Bug/Defect?</div>
+                <div class="answer">Deviation from expected behavior.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q8. Severity vs Priority?</div>
+                <div class="answer">Severity = impact; Priority = urgency to fix.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q9. What is Regression Testing?</div>
+                <div class="answer">Re-testing existing features after changes.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q10. What is Smoke Testing?</div>
+                <div class="answer">Basic build verification to ensure stability.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q11. What is Sanity Testing?</div>
+                <div class="answer">Quick checks on specific functionality after minor changes.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q12. What is UAT?</div>
+                <div class="answer">End users validate system before release.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q13. What is Retesting?</div>
+                <div class="answer">Testing a fixed defect again.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q14. What is Exploratory Testing?</div>
+                <div class="answer">Simultaneous learning, test design, and execution without scripts.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q15. Black Box vs White Box?</div>
+                <div class="answer">Black: no code knowledge; White: with code knowledge.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q16. What is Functional Testing?</div>
+                <div class="answer">Testing features against requirements.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q17. What is Non-Functional Testing?</div>
+                <div class="answer">Testing performance, usability, security, etc.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q18. What is Test Data?</div>
+                <div class="answer">Input data used to execute test cases.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q19. What is Bug Life Cycle?</div>
+                <div class="answer">New → Assigned → Open → Fixed → Retest → Closed (varies).</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q20. What is Test Environment?</div>
+                <div class="answer">Hardware/software setup for testing.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q21. What is Boundary Value Analysis?</div>
+                <div class="answer">Testing at edges of input ranges.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q22. What is Equivalence Partitioning?</div>
+                <div class="answer">Dividing inputs into valid/invalid classes.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q23. What is Decision Table Testing?</div>
+                <div class="answer">Testing combinations of inputs and actions.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q24. What is State Transition Testing?</div>
+                <div class="answer">Testing based on state changes.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q25. What is Use Case Testing?</div>
+                <div class="answer">Testing using user workflows.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q26. What is Traceability Matrix?</div>
+                <div class="answer">Mapping requirements to test cases.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q27. What is Test Coverage?</div>
+                <div class="answer">Extent of code/requirements covered by tests.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q28. What is Build?</div>
+                <div class="answer">Version of software for testing.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q29. What is Release?</div>
+                <div class="answer">Approved build delivered to users.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q30. What is Defect Leakage?</div>
+                <div class="answer">Bugs missed in testing and found in production.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q31. What is Defect Density?</div>
+                <div class="answer">Number of defects per module size.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q32. What is Risk-Based Testing?</div>
+                <div class="answer">Prioritizing tests based on risk.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q33. What is Ad-hoc Testing?</div>
+                <div class="answer">Unstructured testing without documentation.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q34. What is Compatibility Testing?</div>
+                <div class="answer">Testing across devices, OS, browsers.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q35. What is Usability Testing?</div>
+                <div class="answer">Ease of use evaluation.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q36. What is Performance Testing?</div>
+                <div class="answer">Speed, stability, scalability checks.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q37. What is Load Testing?</div>
+                <div class="answer">Behavior under expected load.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q38. What is Stress Testing?</div>
+                <div class="answer">Behavior beyond limits.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q39. What is Security Testing?</div>
+                <div class="answer">Identifying vulnerabilities.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q40. What is Accessibility Testing?</div>
+                <div class="answer">Testing for users with disabilities.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q41. What is Installation Testing?</div>
+                <div class="answer">Install/uninstall behavior.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q42. What is Localization Testing?</div>
+                <div class="answer">Language/region checks.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q43. What is Globalization Testing?</div>
+                <div class="answer">Product readiness for multiple locales.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q44. What is Alpha Testing?</div>
+                <div class="answer">Internal user testing.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q45. What is Beta Testing?</div>
+                <div class="answer">External user testing.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q46. What is Acceptance Criteria?</div>
+                <div class="answer">Conditions for feature acceptance.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q47. What is Test Strategy?</div>
+                <div class="answer">High-level approach to testing.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q48. What is Test Suite?</div>
+                <div class="answer">Collection of test cases.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q49. What is Test Execution?</div>
+                <div class="answer">Running test cases.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q50. What is Test Closure?</div>
+                <div class="answer">Finalizing testing activities.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q51. What is Bug Report?</div>
+                <div class="answer">Document describing a defect.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q52. What is Reproducibility?</div>
+                <div class="answer">Ability to reproduce a bug.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q53. What is Environment Issue?</div>
+                <div class="answer">Issue due to setup, not code.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q54. What is False Positive?</div>
+                <div class="answer">Reported bug that is not valid.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q55. What is False Negative?</div>
+                <div class="answer">Missed bug during testing.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q56. What is Test Metrics?</div>
+                <div class="answer">Measurements like pass rate, defect rate.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q57. What is Defect Triage?</div>
+                <div class="answer">Prioritizing and assigning bugs.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q58. What is Agile Testing?</div>
+                <div class="answer">Testing in iterative Agile process.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q59. What is Sprint?</div>
+                <div class="answer">Time-boxed iteration in Agile.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q60. What is Scrum?</div>
+                <div class="answer">Agile framework with roles and ceremonies.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q61. What is Definition of Done?</div>
+                <div class="answer">Criteria for completion.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q62. What is CI/CD?</div>
+                <div class="answer">Continuous Integration/Delivery pipeline.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q63. What is Shift Left Testing?</div>
+                <div class="answer">Testing earlier in lifecycle.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q64. What is Test Automation?</div>
+                <div class="answer">Using tools to run tests automatically.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q65. Manual vs Automation?</div>
+                <div class="answer">Manual is human-driven; Automation uses scripts.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q66. What is API Testing?</div>
+                <div class="answer">Testing backend services via endpoints.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q67. What is UI Testing?</div>
+                <div class="answer">Testing user interface.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q68. What is Cross Browser Testing?</div>
+                <div class="answer">Testing across browsers.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q69. What is Mobile Testing?</div>
+                <div class="answer">Testing on mobile devices.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q70. What is Monkey Testing?</div>
+                <div class="answer">Random testing without cases.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q71. What is Pair Testing?</div>
+                <div class="answer">Two testers collaborate.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q72. What is Error Guessing?</div>
+                <div class="answer">Using experience to find defects.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q73. What is Checklist Testing?</div>
+                <div class="answer">Using predefined checklist.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q74. What is Data-Driven Testing?</div>
+                <div class="answer">Using multiple datasets.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q75. What is Session-Based Testing?</div>
+                <div class="answer">Time-boxed exploratory testing.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q76. What is Test Harness?</div>
+                <div class="answer">Tools to run tests.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q77. What is Mocking?</div>
+                <div class="answer">Simulating dependencies.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q78. What is Stubbing?</div>
+                <div class="answer">Returning fixed responses.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q79. What is Logging?</div>
+                <div class="answer">Recording events for debugging.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q80. What is Debugging?</div>
+                <div class="answer">Finding root cause of defects.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q81. What is Root Cause Analysis?</div>
+                <div class="answer">Identifying origin of issue.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q82. What is Hotfix?</div>
+                <div class="answer">Quick fix in production.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q83. What is Patch?</div>
+                <div class="answer">Small update fixing issues.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q84. What is Versioning?</div>
+                <div class="answer">Tracking software versions.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q85. What is Backward Compatibility?</div>
+                <div class="answer">New version supports old behavior.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q86. What is Forward Compatibility?</div>
+                <div class="answer">Old version supports future changes.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q87. What is Testability?</div>
+                <div class="answer">Ease of testing a system.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q88. What is Observability?</div>
+                <div class="answer">Ability to infer system state from outputs.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q89. What is Reliability Testing?</div>
+                <div class="answer">Consistency over time.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q90. What is Recovery Testing?</div>
+                <div class="answer">Recovery after failure.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q91. What is Failover Testing?</div>
+                <div class="answer">Switching to backup systems.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q92. What is Scalability Testing?</div>
+                <div class="answer">Handling increased load.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q93. What is Soak Testing?</div>
+                <div class="answer">Long duration load testing.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q94. What is A/B Testing?</div>
+                <div class="answer">Comparing two versions.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q95. What is Canary Release?</div>
+                <div class="answer">Gradual rollout to subset of users</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q96. What is Feature Flag?</div>
+                <div class="answer">Toggle features without deploy.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q97. What is Log Analysis?</div>
+                <div class="answer">Review logs for issues.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q98. What is Data Integrity Testing?</div>
+                <div class="answer">Accuracy and consistency of data.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q99. What is ETL Testing?</div>
+                <div class="answer">Extract, Transform, Load validation.</div>
+            </div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q100. What is Database Testing?</div>
+                <div class="answer">Validating DB operations.</div>
+            </div>
+
+        </div>
+        <h2>API Testing</h2>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is API Testing?</div>
+            <div class="answer">API testing is the process of testing backend services without UI to verify
+                functionality, reliability, performance, and security.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is REST API?</div>
+            <div class="answer">REST (Representational State Transfer) is an architectural style that uses HTTP methods
+                like GET, POST, PUT, DELETE.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What are HTTP methods?</div>
+            <div class="answer">GET (fetch data), POST (create data), PUT (update full data), PATCH (partial update),
+                DELETE (remove data).</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is Status Code 200?</div>
+            <div class="answer">It means the request was successful.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is Status Code 201?</div>
+            <div class="answer">It means resource is successfully created.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is Status Code 400?</div>
+            <div class="answer">Bad request – client side error.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is Status Code 401 & 403?</div>
+            <div class="answer">401 = Unauthorized, 403 = Forbidden.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is Status Code 500?</div>
+            <div class="answer">Internal server error.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is JSON?</div>
+            <div class="answer">JavaScript Object Notation – lightweight data format used in APIs.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is Request and Response?</div>
+            <div class="answer">Request is sent to server, Response is returned from server.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is Header in API?</div>
+            <div class="answer">Metadata sent with request like Authorization, Content-Type.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is Authentication?</div>
+            <div class="answer">Process of verifying user identity (API key, token, OAuth).</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is Authorization?</div>
+            <div class="answer">Checking user permissions after authentication.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is Postman?</div>
+            <div class="answer">A popular tool used for API testing.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is Swagger?</div>
+            <div class="answer">Tool for API documentation and testing.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is API Testing vs UI Testing?</div>
+            <div class="answer">API testing is faster and checks backend logic; UI testing checks frontend behavior.
+            </div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What will you test in API?</div>
+            <div class="answer">Status codes, response body, headers, response time, security, data validation.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is Response Time?</div>
+            <div class="answer">Time taken by server to respond to a request.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is Rate Limiting?</div>
+            <div class="answer">Limiting number of API requests per user/time.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is Idempotent API?</div>
+            <div class="answer">Multiple identical requests give same result (e.g., GET, PUT).</div>
+        </div>
+        <h2>Selenium</h2>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is Selenium?</div>
+            <div class="answer">Selenium is an open-source tool used for automating web browsers.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is WebDriver?</div>
+            <div class="answer">WebDriver is an interface that allows interaction with browsers.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">Difference between findElement and findElements?</div>
+            <div class="answer">findElement returns single element and throws exception if not found; findElements
+                returns list and returns empty list if not found.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What are locators?</div>
+            <div class="answer">Ways to identify elements like ID, Name, XPath, CSS Selector.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is XPath?</div>
+            <div class="answer">XPath is a locator used to find elements in XML/HTML structure.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is implicit wait?</div>
+            <div class="answer">Wait applied globally for element search.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is explicit wait?</div>
+            <div class="answer">Wait for specific condition using WebDriverWait.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is Page Object Model (POM)?</div>
+            <div class="answer">Design pattern to separate page elements and test logic.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">How to handle alerts?</div>
+            <div class="answer">Using driver.switchTo().alert().accept() or dismiss().</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">How to handle dropdown?</div>
+            <div class="answer">Using Select class (selectByVisibleText, selectByValue).</div>
+        </div>
+
+        <h2>API Testing (RestAssured)</h2>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is RestAssured?</div>
+            <div class="answer">Java library used for API automation testing.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">How to send GET request?</div>
+            <div class="answer">given().when().get("url").then().statusCode(200);</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">How to validate response?</div>
+            <div class="answer">Using then().assertThat().body() methods.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">How to pass headers?</div>
+            <div class="answer">given().header("key","value").when().get()</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">How to pass request body?</div>
+            <div class="answer">given().body(json).when().post()</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is JSONPath?</div>
+            <div class="answer">Used to extract values from JSON response.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">How to validate status code?</div>
+            <div class="answer">then().statusCode(200)</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is authentication in API?</div>
+            <div class="answer">Using tokens, API keys, OAuth.</div>
+        </div>
+
+        <h2>Postman</h2>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is Postman?</div>
+            <div class="answer">Tool used for API testing and automation.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is Collection?</div>
+            <div class="answer">Group of API requests.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is Environment?</div>
+            <div class="answer">Set of variables used in requests.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is Pre-request Script?</div>
+            <div class="answer">Script executed before API request.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is Test Script?</div>
+            <div class="answer">Script used to validate response.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is Newman?</div>
+            <div class="answer">CLI tool to run Postman collections.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">How to automate API in Postman?</div>
+            <div class="answer">Using collections + test scripts + Newman.</div>
+        </div>
+
+        <h2>Selenium + Maven + TestNG</h2>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is Maven?</div>
+            <div class="answer">Maven is a build automation tool used to manage dependencies and project lifecycle.
+            </div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is pom.xml?</div>
+            <div class="answer">It is a configuration file in Maven that contains dependencies, plugins, and project
+                information.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is dependency in Maven?</div>
+            <div class="answer">External libraries required for project execution (e.g., Selenium, TestNG).</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is TestNG?</div>
+            <div class="answer">TestNG is a testing framework used for test execution, grouping, parallel testing, and
+                reporting.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What are TestNG annotations?</div>
+            <div class="answer">@Test, @BeforeSuite, @AfterSuite, @BeforeMethod, @AfterMethod, etc.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">Difference between @BeforeMethod and @BeforeClass?</div>
+            <div class="answer">@BeforeMethod runs before each test method, @BeforeClass runs once before all methods in
+                class.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is testng.xml?</div>
+            <div class="answer">It is used to configure test execution, grouping, and parallel runs.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">How to run tests using Maven?</div>
+            <div class="answer">Using command: mvn test</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is grouping in TestNG?</div>
+            <div class="answer">Grouping allows running specific sets of test cases using group names.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is parallel testing in TestNG?</div>
+            <div class="answer">Running multiple tests simultaneously to reduce execution time.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is DataProvider in TestNG?</div>
+            <div class="answer">Used to run test methods with multiple sets of data.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is Assert in TestNG?</div>
+            <div class="answer">Used to validate expected vs actual results.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is SoftAssert?</div>
+            <div class="answer">Allows multiple validations without stopping test execution.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is Page Object Model (POM)?</div>
+            <div class="answer">Design pattern to separate UI elements and test logic.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">How to handle synchronization issues in Selenium?</div>
+            <div class="answer">Using waits like implicit, explicit, and fluent wait.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is Fluent Wait?</div>
+            <div class="answer">Wait with polling frequency and exception handling.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">How to take screenshot in Selenium?</div>
+            <div class="answer">Using TakesScreenshot interface.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">How to handle frames in Selenium?</div>
+            <div class="answer">Using driver.switchTo().frame()</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">How to handle multiple windows?</div>
+            <div class="answer">Using getWindowHandles() and switchTo().window()</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is Thread.sleep vs Wait?</div>
+            <div class="answer">Thread.sleep is static wait, while explicit wait is dynamic and better.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">How to integrate Selenium with TestNG?</div>
+            <div class="answer">Add TestNG dependency in Maven and use annotations for execution.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">How to generate reports in TestNG?</div>
+            <div class="answer">TestNG automatically generates HTML reports after execution.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is priority in TestNG?</div>
+            <div class="answer">Defines execution order of test methods.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is dependsOnMethods?</div>
+            <div class="answer">Used to define dependency between test methods.</div>
+        </div>
+        <h2>Appium</h2>
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is Appium?</div>
+            <div class="answer">Mobile automation tool.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is Desired Capability?</div>
+            <div class="answer">Key-value config for session.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is APK?</div>
+            <div class="answer">Android app package.</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">What is Inspector?</div>
+            <div class="answer">Tool to inspect elements.</div>
+        </div>
+
+        <h2>Scenario Based Questions</h2>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">Login fail ho raha hai – kaise debug karoge?</div>
+            <div class="answer">
+                1. Check karo credentials sahi hai ya nahi<br>
+                2. API response check karo (login API fail to nahi ho raha)<br>
+                3. UI locator change to nahi hua (element mil raha hai ya nahi)<br>
+                4. Console logs / error logs check karo<br>
+                5. Network tab me request/response verify karo<br>
+                6. Environment issue (dev/stage/prod mismatch)<br>
+                7. Recent changes / deployment check karo
+            </div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">Agar test case pass ho raha hai but production me bug aa gaya to?</div>
+            <div class="answer">
+                1. Test coverage insufficient ho sakta hai<br>
+                2. Edge cases miss ho gaye<br>
+                3. Environment difference<br>
+                4. Data mismatch<br>
+                5. Reproduce karke root cause find karo<br>
+                6. Test cases update karo
+            </div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">Page load slow hai – kaise test karoge?</div>
+            <div class="answer">
+                1. Network speed check karo<br>
+                2. API response time check karo<br>
+                3. Browser dev tools use karo<br>
+                4. Performance testing tools (JMeter etc.)<br>
+                5. Large images / scripts identify karo
+            </div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">Element click nahi ho raha – kya karoge?</div>
+            <div class="answer">
+                1. Check element visible hai ya nahi<br>
+                2. Wait apply karo (explicit wait)<br>
+                3. Scroll karo element tak<br>
+                4. Overlay / popup block to nahi kar raha<br>
+                5. JavaScript click try karo
+            </div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">Automation test flaky hai (kabhi pass kabhi fail) – kaise fix karoge?</div>
+            <div class="answer">
+                1. Proper waits use karo<br>
+                2. Stable locators use karo<br>
+                3. Hardcoded sleep avoid karo<br>
+                4. Test data fix karo<br>
+                5. Environment stability check karo
+            </div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">API 200 de rahi hai but data galat hai – kya karoge?</div>
+            <div class="answer">
+                1. Response body validate karo<br>
+                2. Database verify karo<br>
+                3. Business logic issue ho sakta hai<br>
+                4. Backend logs check karo<br>
+                5. Proper assertions add karo
+            </div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">Checkout flow fail ho raha hai – kaise approach karoge?</div>
+            <div class="answer">
+                1. Step by step flow test karo<br>
+                2. Payment API check karo<br>
+                3. Cart data verify karo<br>
+                4. Logs check karo<br>
+                5. Edge cases test karo (empty cart, invalid data)
+            </div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">New feature aaya hai – kaise test karoge?</div>
+            <div class="answer">
+                1. Requirement samjho<br>
+                2. Test cases likho<br>
+                3. Positive & negative testing karo<br>
+                4. Regression run karo<br>
+                5. Edge cases cover karo
+            </div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">App crash ho raha hai – kya steps loge?</div>
+            <div class="answer">
+                1. Logs check karo (Crash logs)<br>
+                2. Reproduce steps identify karo<br>
+                3. Device/environment check karo<br>
+                4. Recent changes verify karo<br>
+                5. Dev team ke sath share karo
+            </div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="question">Agar requirement clear nahi hai to kya karoge?</div>
+            <div class="answer">
+                1. BA/PO se clarification lo<br>
+                2. Assumptions document karo<br>
+                3. Team discussion karo<br>
+                4. Test cases finalize karo
+            </div>
+        </div>
+
+        <h2>Hr Questions</h2>
+        <div class="card" onclick="toggle(this)">
+            <div class="question">Q1: Tell me about your project</div>
+            <div class="answer">I worked on Ubuy e-commerce application where I was responsible for both manual and
+                automation testing.
+
+                In manual testing, I validated features like login, product search, cart, checkout, and order tracking.
+
+                For automation, I used Selenium with Java for web testing and Appium for mobile testing. I automated key
+                flows like login, search, add to cart, and checkout.
+
+                I also worked on API testing using Postman and validated APIs like login and order APIs.
+
+                Additionally, I identified and reported bugs using proper defect lifecycle.</div>
+
+            <div class="card" onclick="toggle(this)">
+                <div class="question">Q2: How you used Selenium in your project?</div>
+                <div class="answer">I used Selenium WebDriver with Java and TestNG.
+
+                    I automated major flows like:
+                    - Login
+                    - Product search
+                    - Add to cart
+                    - Checkout
+
+                    I used Page Object Model for better structure and maintainability.
+
+                    Also used explicit waits to handle dynamic elements and avoided Thread.sleep.</div>
+
+                <div class="card" onclick="toggle(this)">
+                    <div class="question">Q3: How you handled API testing?</div>
+                    <div class="answer"> I used Postman for API testing.
+
+                        I validated:
+                        - Status codes
+                        - Response body
+                        - Headers
+                        - Response time
+
+                        For example, I tested login API and verified token generation and error responses for invalid
+                        credentials.</div>
+
+                    <div class="card" onclick="toggle(this)">
+                        <div class="question">Q5: How do you debug failures?</div>
+                        <div class="answer"> First, I try to reproduce the issue.
+
+                            Then I check:
+                            - Logs
+                            - Network/API response
+                            - UI locators
+                            - Environment differences
+
+                            If needed, I coordinate with developers to identify root cause.</div>
+
+                    </div>
+                </div>
+
+                <script>
+                    function toggle(card) {
+                        let ans = card.querySelector('.answer');
+                        ans.style.display = (ans.style.display === 'block') ? 'none' : 'block';
+                    }
+
+                    function filterQ() {
+                        let input = document.getElementById('search').value.toLowerCase();
+                        let cards = document.getElementsByClassName('card');
+                        for (let i = 0; i < cards.length; i++) {
+                            let text = cards[i].innerText.toLowerCase();
+                            cards[i].style.display = text.includes(input) ? 'block' : 'none';
+                        }
+                    }
+                </script>
+
+</body>
+
+</html>
